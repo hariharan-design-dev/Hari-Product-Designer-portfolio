@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-warm: #F7F5F0;
+    --text-primary: #111111;
+    --text-secondary: #5F5F5F;
+    --text-muted: #8A8A8A;
+    --border-color: #E5E1DA;
+    --accent-color: #FF572F;
+    --dark-bg: #111111;
+  }
+
+  body {
+    background-color: var(--bg-warm);
+    color: var(--text-primary);
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-instrument), sans-serif;
+  }
+
+  .font-cursive {
+    font-family: var(--font-caveat), cursive;
+  }
+}
+
+/* Photo Rail Infinite Marquee Keyframes */
+@keyframes journeyMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-journeyMarquee {
+  animation: journeyMarquee 60s linear infinite;
+}
+
+.animate-journeyMarquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-journeyMarquee {
+    animation: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D5CC;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4C0B5;
+}
