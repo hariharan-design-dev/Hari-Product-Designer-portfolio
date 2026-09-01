@@ -19,6 +19,10 @@ export const NAV_ITEMS = [
   { label: 'Contact', href: '/contact' },
 ] as const;
 
+const email_address = "harih7397108713@gmail.com";
+const email_subject = "Inquiry: Connecting from Portfolio";
+const email_body = "Hi HariHaran, I recently visited your portfolio and was impressed by your work. i would like to connect and discuss potential opportunities to collaborate. Looking forward to hearing from you.";
+
 export const SOCIAL_LINKS = [
   {
     name: 'LinkedIn',
@@ -37,7 +41,7 @@ export const SOCIAL_LINKS = [
   },
   {
     name: 'Email',
-    href: 'mailto:harih7397108713@gmail.com',
+    href: `mailto:${email_address}?subject=${encodeURIComponent(email_subject)}&body=${encodeURIComponent(email_body)}`,
     icon: 'email',
   },
 ] as const;

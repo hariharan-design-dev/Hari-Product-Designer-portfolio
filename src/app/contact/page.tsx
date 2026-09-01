@@ -35,6 +35,8 @@ export default function ContactPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const emailAddress = 'harih7397108713@gmail.com';
+  const emailSubject = "Inquiry: Connecting from Portfolio";
+  const emailBody = "Hi HariHaran, I recently visited your portfolio and was impressed by your work. i would like to connect and discuss potential opportunities to collaborate. Looking forward to hearing from you.";
   const phoneNumber = '+91 73971 08713';
   const locationText = 'Sivakasi, Tamil Nadu, India';
 
@@ -265,7 +267,7 @@ export default function ContactPage() {
                     <div className="mt-6 space-y-4">
                       {/* EMAIL CARD */}
                       <a
-                        href={`mailto:${emailAddress}`}
+                        href={`mailto:${emailAddress}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`}
                         className="group flex items-center justify-between rounded-2xl border border-[#E5E1DA] bg-[#F7F5F0]/50 p-4 transition-all duration-200 hover:border-[#FF572F] hover:bg-white"
                       >
                         <div className="flex items-center space-x-4">
